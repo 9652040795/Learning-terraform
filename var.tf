@@ -35,4 +35,4 @@ variable "azs" {
 
 #EC2 Setup Interactive
 variable "ami-id" {}
-variable "ec2-subnet" {}
+#variable "ec2-subnet" {}
