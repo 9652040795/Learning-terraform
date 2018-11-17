@@ -32,3 +32,7 @@ variable "azs" {
 # Declare DATA SOURCE to get automatically fetch a AZS list from a Region.
 #Simple just change the region from the top, all AZS in that region will be picked.
 #data "aws_availability_zones" "azs" {}
+
+#EC2 Setup Interactive
+variable "ami-id" {}
+variable "ec2-subnet" {}
