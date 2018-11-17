@@ -34,5 +34,5 @@ variable "azs" {
 #data "aws_availability_zones" "azs" {}
 
 #EC2 Setup Interactive
-variable "ami-id" {}
+#variable "ami-id" {}
 #variable "ec2-subnet" {}
