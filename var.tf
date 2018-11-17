@@ -36,3 +36,9 @@ variable "azs" {
 #EC2 Setup Interactive
 #variable "ami-id" {}
 #variable "ec2-subnet" {}
+
+#EC2 Subnet ID's for Subnets
+variable "ec2-subnets-id" {
+  type = "list"
+  default = ["subnet-0b81a7528afbe2da0","subnet-027c42400b62a3a8b","subnet-0b3964e3fcafc5055"]
+}
