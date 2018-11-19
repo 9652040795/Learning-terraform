@@ -41,9 +41,10 @@ resource "aws_vpc" "my-vpc" {
 
 #CREATING PUBLIC SUBNET 1
 resource "aws_subnet" "public-subnet-1" {
+  availability_zone = "${var.vpc-public-subnet-1-az}"
   cidr_block = "${var.vpc-public-subnet-1}"
   vpc_id = "${aws_vpc.my-vpc.id}"
-
+  map_public_ip_on_launch = "true"
   tags {
     Name = "Public-Subnet-1"
   }
@@ -51,9 +52,10 @@ resource "aws_subnet" "public-subnet-1" {
 
 #CREATING PUBLIC SUBNET 2
 resource "aws_subnet" "public-subnet-2" {
+  availability_zone = "${var.vpc-public-subnet-2-az}"
   cidr_block = "${var.vpc-public-subnet-2}"
   vpc_id = "${aws_vpc.my-vpc.id}"
-
+  map_public_ip_on_launch = "true"
   tags {
     Name = "Public-Subnet-2"
   }
@@ -61,9 +63,10 @@ resource "aws_subnet" "public-subnet-2" {
 
 #CREATING PUBLIC SUBNET 3
 resource "aws_subnet" "public-subnet-3" {
+  availability_zone = "${var.vpc-public-subnet-3-az}"
   vpc_id = "${aws_vpc.my-vpc.id}"
   cidr_block = "${var.vpc-public-subnet-3}"
-
+  map_public_ip_on_launch = "true"
   tags {
     Name = "Public-Subnet-3"
   }

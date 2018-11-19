@@ -19,15 +19,24 @@ variable "vpc-cidr" {
 variable "vpc-public-subnet-1" {
   default = "192.168.1.0/24"
 }
+variable "vpc-public-subnet-1-az" {
+  default = "us-east-1a"
+}
 
 # VPC PUBLIC SUBNET 2
 variable "vpc-public-subnet-2" {
   default = "192.168.2.0/24"
 }
+variable "vpc-public-subnet-2-az" {
+  default = "us-east-1b"
+}
 
 # VPC PUBLIC SUBNET 3
 variable "vpc-public-subnet-3" {
   default = "192.168.3.0/24"
+}
+variable "vpc-public-subnet-3-az" {
+  default = "us-east-1c"
 }
 
 
