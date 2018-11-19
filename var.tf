@@ -41,19 +41,44 @@ variable "vpc-public-subnet-3-az" {
 
 
 #VPC PRIVATE SUBNETS CIDR BLOCK
-variable "vpc-private-subnet-cidr" {
-  type = "list"
-  default = ["192.168.4.0/24","192.168.5.0/24","192.168.6.0/24"]
+#variable "vpc-private-subnet-cidr" {
+#  type = "list"
+#  default = ["192.168.4.0/24","192.168.5.0/24","192.168.6.0/24"]
+#}
+
+# VPC PRIVATE SUBNET 1
+variable "vpc-private-subnet-1" {
+  default = "192.168.4.0/24"
+}
+variable "vpc-priavte-subnet-1-az" {
+  default = "us-east-1a"
 }
 
+# VPC PRIVATE SUBNET 2
+
+variable "vpc-private-subnet-2" {
+  default = "192.168.5.0/24"
+}
+variable "vpc-priavte-subnet-2-az" {
+  default = "us-east-1b"
+}
+
+# VPC PRIVATE SUBNET 3
+
+variable "vpc-private-subnet-3" {
+  default = "192.168.6.0/24"
+}
+variable "vpc-priavte-subnet-3-az" {
+  default = "us-east-1c"
+}
 
 
 
 #CREATE MULTIPLE AZS
-variable "azs" {
-  type = "list"
-  default = ["us-east-1a","us-east-1b","us-east-1c"]
-}
+#variable "azs" {
+#  type = "list"
+#  default = ["us-east-1a","us-east-1b","us-east-1c"]
+#}
 
 # Declare DATA SOURCE to get automatically fetch a AZS list from a Region.
 #Simple just change the region from the top, all AZS in that region will be picked.
