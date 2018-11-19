@@ -11,8 +11,11 @@ resource "aws_vpc" "my-vpc" {
   }
 }
 
+
+data "aws_availability_zones" "all-azs" {}
 resource "aws_subnet" "public-subnets" {
-  availability_zone = "${element(var.azs,count.index)}"
+#  availability_zone = "${element(var.azs,count.index)}"
+  availability_zone = ["${data.aws_availability_zones.all-azs.names}"]
   count = "${length(var.azs)}"
   cidr_block = "${element(var.vpc-public-subnet-cidr,count.index)}"
   vpc_id = "${aws_vpc.my-vpc.id}"
@@ -39,7 +42,8 @@ resource "aws_subnet" "public-subnets" {
 
 
 resource "aws_subnet" "private-subnets" {
-  availability_zone = "${element(var.azs,count.index)}"
+#  availability_zone = "${element(var.azs,count.index)}"
+  availability_zone = ["${data.aws_availability_zones.all-azs.names}"]
   count = "${length(var.azs)}"
   cidr_block = "${element(var.vpc-private-subnet-cidr,count.index)}"
   vpc_id = "${aws_vpc.my-vpc.id}"

@@ -23,11 +23,11 @@ variable "vpc-private-subnet-cidr" {
 
 
 
-#CREATE MULTIPLE AZS
-variable "azs" {
-  type = "list"
-  default = ["us-east-1a","us-east-1b","us-east-1c"]
-}
+#CREATE MULTIPLE AZS or USE DATA SOURCES
+#variable "azs" {
+#  type = "list"
+#  default = ["us-east-1a","us-east-1b","us-east-1c"]
+#}
 
 # Declare DATA SOURCE to get automatically fetch a AZS list from a Region.
 #Simple just change the region from the top, all AZS in that region will be picked.
