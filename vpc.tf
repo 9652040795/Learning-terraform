@@ -88,3 +88,16 @@ resource "aws_route_table_association" "public-route" {
   subnet_id = "${element(aws_subnet.public-subnets.*.id, count.index)}"
 }
 
+
+
+#OUTPUT OF PUBLIC-SUBNETS-IDS
+
+output "public-subnet-ids" {
+  value = "${aws_subnet.public-subnets.*.id}"
+}
+
+#OUTPUT OF PRIVATE-SUBNETS-IDS
+
+output "priavte-subnet-ids" {
+  value = "${aws_subnet.private-subnets.*.id}"
+}
