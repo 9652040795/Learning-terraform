@@ -273,7 +273,7 @@ resource "aws_route_table" "private-route-2" {
     Name = "Priave-Subnet-Route-2"
   }
 }
-#ASSOCIATE/LINK PRIVATE-ROUTE WITH PRIVATE-SUBNET-1
+#ASSOCIATE/LINK PRIVATE-ROUTE WITH PRIVATE-SUBNET-2
 resource "aws_route_table_association" "private-route-2" {
   route_table_id = "${aws_route_table.private-route-2.id}"
   subnet_id = "${aws_subnet.private-subnet-2.id}"
@@ -291,7 +291,7 @@ resource "aws_eip" "nat-eip-3" {
 
 
 
-#NAT-GATEWAY-2 FOR PRIVATE IP ADDRESSES
+#NAT-GATEWAY-3 FOR PRIVATE IP ADDRESSES
 resource "aws_nat_gateway" "ngw-3" {
   allocation_id = "${aws_eip.nat-eip-3.id}"
   subnet_id = "${aws_subnet.public-subnet-3.id}"
@@ -313,7 +313,7 @@ resource "aws_route_table" "private-route-3" {
     Name = "Priave-Subnet-Route-3"
   }
 }
-#ASSOCIATE/LINK PRIVATE-ROUTE WITH PRIVATE-SUBNET-1
+#ASSOCIATE/LINK PRIVATE-ROUTE WITH PRIVATE-SUBNET-3
 resource "aws_route_table_association" "private-route-3" {
   route_table_id = "${aws_route_table.private-route-3.id}"
   subnet_id = "${aws_subnet.private-subnet-3.id}"
