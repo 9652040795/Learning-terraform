@@ -9,10 +9,27 @@ variable "vpc-cidr" {
 }
 
 #VPC PUBLIC SUBNETS CIDR BLOCK
-variable "vpc-public-subnet-cidr" {
-  type = "list"
-  default = ["192.168.1.0/24","192.168.2.0/24","192.168.3.0/24"]
+#variable "vpc-public-subnet-cidr" {
+#  type = "list"
+#  default = ["192.168.1.0/24","192.168.2.0/24","192.168.3.0/24"]
+#}
+
+# VPC PUBLIC SUBNET 1
+
+variable "vpc-public-subnet-1" {
+  default = "192.168.1.0/24"
 }
+
+# VPC PUBLIC SUBNET 2
+variable "vpc-public-subnet-2" {
+  default = "192.168.2.0/24"
+}
+
+# VPC PUBLIC SUBNET 3
+variable "vpc-public-subnet-3" {
+  default = "192.168.3.0/24"
+}
+
 
 #VPC PRIVATE SUBNETS CIDR BLOCK
 variable "vpc-private-subnet-cidr" {
