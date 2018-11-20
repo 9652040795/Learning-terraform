@@ -369,6 +369,17 @@ resource "aws_route_table_association" "private-routes-linking" {
 #  subnet_id = "${aws_subnet.private-subnet-3.id}"
 #}
 
+###################################################################
+#https://github.com/terraform-aws-modules/terraform-aws-vpc/blob/master/outputs.tf
+#OUTPUT OF PUBLIC SUBNET IDS
+output "public-subnet-ids" {
+  value = ["${aws_subnet.public-subnets.*.id}"]
+}
+
+#OUTPUT OF PRIVATE SUBNET IDS
+output "private-subnet-ids" {
+value = ["${aws_subnet.private-subnets.*.id}"]
+}
 
 
 
