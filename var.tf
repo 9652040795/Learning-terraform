@@ -96,7 +96,7 @@ variable "ec2-subnets-id" {
   default = ["subnet-0f82144ac988d09f0","subnet-0110e2f5660653648","subnet-09e16122a2066bbff"]
 }
 
-
+##Note: EC2 instance take only subnet_id as compare to RDS it takes subnet_ids##
 ##############################################################
 #RDS VARIABLES
 variable "rds_cidr" {
