@@ -83,13 +83,49 @@ variable "azs" {
 # Declare DATA SOURCE to get automatically fetch a AZS list from a Region.
 #Simple just change the region from the top, all AZS in that region will be picked.
 #data "aws_availability_zones" "azs" {}
-
+#########################################################################3
 #EC2 Setup Interactive
 #variable "ami-id" {}
 #variable "ec2-subnet" {}
 
+#######################################################################
+#EC2 VARIABLES
 #EC2 Subnet ID's for Subnets
 variable "ec2-subnets-id" {
   type = "list"
-  default = ["subnet-0b81a7528afbe2da0","subnet-027c42400b62a3a8b","subnet-0b3964e3fcafc5055"]
+  default = ["subnet-0f82144ac988d09f0","subnet-0110e2f5660653648","subnet-09e16122a2066bbff"]
+}
+
+
+##############################################################
+#RDS VARIABLES
+variable "rds_cidr" {
+  default = "192.168.0.0/16"
+}
+variable "db_instance_class" {
+  default = "db.t2.micro"
+}
+variable "rds_engine" {
+  default = "mysql"
+}
+variable "engine_version" {
+  default = "5.7.17"
+}
+variable "backup_retension_period" {
+  default = "0"
+}
+variable "publicly_accessible" {
+  default = "false"
+}
+variable "rds_username" {
+  default = "sage"
+}
+variable "rds_password" {
+  default = "cbaLpjjsihaha12"
+}
+variable "rds_allocated_storage" {
+  default = "5"
+}
+variable "storage_type" {
+  default = "gp2"
 }

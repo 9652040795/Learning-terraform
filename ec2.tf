@@ -1,6 +1,6 @@
 #Creating an EC2 instance in Public Subnet must mention the "Subnet ID"#
 resource "aws_instance" "cloudelligent" {
-  ami = "ami-0761247d"
+  ami = "ami-0ac019f4fcb7cb7e6"
 #   ami = "${var.ami-id}"
   instance_type = "t2.micro"
 #  subnet_id = "subnet-0b03fbea26eafeb61"
