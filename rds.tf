@@ -7,6 +7,7 @@ resource "aws_db_instance" "db-prod" {
   engine_version = "${var.engine_version}"
   instance_class = "${var.db_instance_class}"
   backup_retention_period = "${var.backup_retension_period}"
+  backup_window = "${var.backup_window}"
   publicly_accessible = "${var.publicly_accessible}"
   username = "${var.rds_username}"
   password = "${var.rds_password}"

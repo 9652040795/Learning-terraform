@@ -111,8 +111,12 @@ variable "rds_engine" {
 variable "engine_version" {
   default = "5.7.17"
 }
+#These are automated backups
 variable "backup_retension_period" {
   default = "0"
+}
+variable "backup_window" {
+  default = "04:00-6:00"
 }
 variable "publicly_accessible" {
   default = "false"
