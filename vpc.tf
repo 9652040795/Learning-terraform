@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "${var.region}"
-}
 resource "aws_vpc" "my-vpc" {
   cidr_block = "${var.vpc-cidr}"
   instance_tenancy = "default"
