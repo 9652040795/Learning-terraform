@@ -30,5 +30,6 @@ resource "aws_instance" "cloudelligent" {
 
 #EXPORTING OUR PUBLIC-KEY
 resource "aws_key_pair" "power" {
+  key_name = "power"
   public_key = "${file("power.pub")}"
 }
