@@ -88,48 +88,4 @@ variable "azs" {
 #variable "ami-id" {}
 #variable "ec2-subnet" {}
 
-#######################################################################
-#EC2 VARIABLES
-#EC2 Subnet ID's for Subnets
-variable "ec2-subnets-id" {
-  type = "list"
-  default = ["subnet-0f82144ac988d09f0","subnet-0110e2f5660653648","subnet-09e16122a2066bbff"]
-}
 
-##Note: EC2 instance take only subnet_id as compare to RDS it takes subnet_ids##
-##############################################################
-#RDS VARIABLES
-variable "rds_cidr" {
-  default = "192.168.0.0/16"
-}
-variable "db_instance_class" {
-  default = "db.t2.micro"
-}
-variable "rds_engine" {
-  default = "mysql"
-}
-variable "engine_version" {
-  default = "5.7.17"
-}
-#These are automated backups
-variable "backup_retension_period" {
-  default = "0"
-}
-variable "backup_window" {
-  default = "04:00-6:00"
-}
-variable "publicly_accessible" {
-  default = "false"
-}
-variable "rds_username" {
-  default = "sage"
-}
-variable "rds_password" {
-  default = "cbaLpjjsihaha12"
-}
-variable "rds_allocated_storage" {
-  default = "5"
-}
-variable "storage_type" {
-  default = "gp2"
-}
