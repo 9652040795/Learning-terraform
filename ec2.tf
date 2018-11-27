@@ -40,7 +40,7 @@ resource "aws_key_pair" "power" {
 #EC2 Subnet ID's for Subnets
 variable "ec2-subnets-id" {
   type = "list"
-  default = ["subnet-09b8057b7d57ac9f5","subnet-08ac6d908828f939c","subnet-0850faa754e63632b"]
+  default = ["subnet-0e451eb94102f3adb","subnet-0e9beadcf79744246","subnet-092c5d7d16b52031a"]
 }
 
 ##Note: EC2 instance take only subnet_id as compare to RDS it takes subnet_ids##

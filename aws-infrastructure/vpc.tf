@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "${var.region}"
+}
+
 resource "aws_vpc" "my-vpc" {
   cidr_block = "${var.vpc-cidr}"
   instance_tenancy = "default"
@@ -378,8 +382,17 @@ output "private-subnet-ids" {
 value = ["${aws_subnet.private-subnets.*.id}"]
 }
 
+#OUTPUT OF PUBLIC ROUTE TABLE IDS
+#output "public_route_table_ids" {
+#  description = "List of IDs of public route tables"
+#  value       = ["${aws_route_table.public-routes.*.id}"]
+#}
 
-
+#OUTPUT OF PRIVATE ROUTE TABLE IDS
+#output "private_route_table_ids" {
+#  description = "List of IDs of private route tables"
+#  value       = ["${aws_route_table.private-routes.*.id}"]
+#}
 
 ##########################################################################################
 #OUTPUT OF PUBLIC-SUBNETS-IDS
