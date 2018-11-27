@@ -47,17 +47,37 @@ variable "ec2-subnets-id" {
 ##############################################################
 
 
-#ElASTIC IP FOR EC2-Instance ASSOCIATION
+#ELASTIC IP FOR EC2-Instance ASSOCIATION
 #resource "aws_eip" "ec2-eip-1" {
 #  vpc = "true"
 #  depends_on = ["aws_internet_gateway.igw"]
 #  network_interface = "${var.ec2-nic-1-id}"
+#  instance = "i-04df1b7567f69fa92"
 #  tags {
-#    Name = "EC2-Elastic-IP-1"
+#    Name = "EC2-Elastic-IP-1-Gateway-1"
 #  }
 #}
 
-#EC2 NIC ID eth0
+#EC2 NIC-1 ID eth0
 #variable "ec2-nic-1-id" {
 #  default = "eni-06ff4d580aed824d6"
+#}
+
+
+
+#ELASTIC IP NO.2 FOR EC2-INSTANCE ASSOCIATION
+#resource "aws_eip" "ec2-eip-2" {
+#  vpc = "true"
+#  depends_on = ["aws_internet_gateway.igw"]
+#  network_interface = "${var.ec2-nic-2-id}"
+#  instance = "i-01fa85ed8ef0ce793"
+#  tags {
+#    Name = "EC2-Elastic-IP-2-Gateway-2"
+#  }
+
+#}
+
+#EC2 NIC-2 ID eth0
+#variable "ec2-nic-2-id" {
+#  default = "eni-0b4652913cc0c26e4"
 #}
