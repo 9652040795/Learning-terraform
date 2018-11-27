@@ -45,3 +45,19 @@ variable "ec2-subnets-id" {
 
 ##Note: EC2 instance take only subnet_id as compare to RDS it takes subnet_ids##
 ##############################################################
+
+
+#ElASTIC IP FOR EC2-Instance ASSOCIATION
+#resource "aws_eip" "ec2-eip-1" {
+#  vpc = "true"
+#  depends_on = ["aws_internet_gateway.igw"]
+#  network_interface = "${var.ec2-nic-1-id}"
+#  tags {
+#    Name = "EC2-Elastic-IP-1"
+#  }
+#}
+
+#EC2 NIC ID eth0
+#variable "ec2-nic-1-id" {
+#  default = "eni-06ff4d580aed824d6"
+#}
