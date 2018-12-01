@@ -1,3 +1,11 @@
+#CREATING A NEW KEY PAIR AND EXPORTING OUR PUBLIC-KEY
+resource "aws_key_pair" "power" {
+  key_name = "power"
+  public_key = "${file("power.pub")}"
+}
+
+
+
 #Creating an EC2 instance in Public Subnet must mention the "Subnet ID"#
 resource "aws_instance" "cloudelligent-ec2" {
 
@@ -29,11 +37,6 @@ resource "aws_instance" "cloudelligent-ec2" {
   }
 }
 
-#EXPORTING OUR PUBLIC-KEY
-resource "aws_key_pair" "power" {
-  key_name = "power"
-  public_key = "${file("power.pub")}"
-}
 
 #######################################################################
 #EC2 VARIABLES
